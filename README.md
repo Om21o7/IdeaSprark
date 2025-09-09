@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# IdeaSpark 💡
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+IdeaSpark is a web application to manage ideas, follow-ups, and get AI-generated feedback for each idea.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Add new ideas with a title, tagline, and improvement notes.
+- Track and manage follow-ups for each idea.
+- Ask AI questions about specific ideas and receive answers.
+- Responsive UI using React and Tailwind CSS.
+- Backend powered by Node.js, Express.js, and OpenAI API.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+- **Frontend:** React, Tailwind CSS
+- **Backend:** Node.js, Express.js
+- **AI:** OpenAI GPT-3.5 Turbo
+- **Environment Management:** dotenv
+- **CORS Handling:** cors
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ideaspark/
+│
+├─ server/ # Express backend
+│ ├─ index.js # Server entry point
+│ └─ .env # Environment variables (ignored in Git)
+│
+├─ src/ # React frontend
+│ ├─ components/ # React components (IdeaCard, Navbar, StatsBar)
+│ ├─ App.js # Main frontend app
+│ ├─ index.js # React entry point
+│ └─ api.js # Optional API utilities
+│
+├─ package.json
+├─ package-lock.json
+├─ tailwind.config.js
+├─ postcss.config.js
+└─ README.md
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Setup Instructions
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 1. Clone the repository
+```bash
+git clone https://github.com/Om21o7/IdeaSprark.git
+cd IdeaSprark
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Backend Setup
+cd server
+npm install
+reate a .env file in the server folder:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+OPENAI_API_KEY=your_openai_api_key_here
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+Start the backend server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+node index.js
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+Runs on http://localhost:5000.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+Frontend Setup
+cd ..
+npm install
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+Frontend runs on http://localhost:3000.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+ ### Usage :
+ Open the app in your browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Add a new idea using the input field.
 
-### Deployment
+Click Add Follow-up to add notes for each idea.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Ask the AI by typing a question and clicking Ask.
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+AI responses appear below each idea.
